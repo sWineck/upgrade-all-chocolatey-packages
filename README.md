@@ -9,9 +9,7 @@ Add the following arguments:
 
 -NoExit -ExecutionPolicy Bypass -File "C:\Users\USERNAME\files\choco_upgrade.ps1".
 
-Again, make sure the path to the script is correct.
-Now click on "Next" and then "Finish".
-
+Again, make sure the path to the script is correct. Now click on "Next" and then "Finish".
 Now find your newly created task and display the properties by right clicking on the task.
 In the tab "General" an admin account should be selected, which will be used to execute the task. If this is not the case change it by clicking the "Change user or group" button.
 Now select "Run independently of user login" and set the "Run with highest privileges" checkbox.
@@ -30,7 +28,6 @@ Füge folgende Argumente hinzu:
 
 Achte auch hier auf den korrekten Pfad zum Skript.
 Jetzt auf "Weiter" klicken und anschließend auf "Fertig stellen".
-
 Finde nun deine neu erstellte Aufgabe und lasse dir die Eigenschaften über einen Rechtsklick auf die Aufgabe anzeigen.
 Im Reiter "Allgemein" sollte ein Admin-Konto ausgewählt sein, welches verwendet wird um die Aufgabe auszuführen. Wenn das nicht der Fall ist, ändere dies über den Button "Benutzer oder Gruppe ändern".
 Wähle nun "Unabhängig von der Benutzeranmeldung ausführen" und setze die Checkbox "Mit höchsten Privilegien ausführen".
