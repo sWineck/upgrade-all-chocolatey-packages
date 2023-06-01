@@ -4,16 +4,16 @@ Uses Powershell 7 with admin privileges to execute the command "choco upgrade al
 Replace "USERNAME" with the your user name for saving the log file in the correct path.
  
 The script can be automated with the Task Scheduler, so that the packages are always kept up to date. E.g. you could run the script every time a user logs in.
-Start the Task Scheduler as administrator and create a "Simple Task". Enter name and description. Select the desired trigger. Select "Start program" for the action. Now enter the path to your Powershell or find the .exe with the explorer via "Browse". With me it is this path: "C:\Program Files\PowerShell\7\pwsh.exe".
+Start the Task Scheduler as administrator and create a "Simple Task". Enter name and description. Select the desired trigger. Select "Start program" for the action. Now enter the path to your Powershell or find the .exe with the explorer via "Browse". For me it is this path: "C:\Program Files\PowerShell\7\pwsh.exe".
 Add the following arguments:
 
 -NoExit -ExecutionPolicy Bypass -File "C:\Users\USERNAME\files\choco_upgrade.ps1".
 
 Again, make sure the path to the script is correct.
-Now click on "Next" and then on "Finish".
+Now click on "Next" and then "Finish".
 
 Now find your newly created task and display the properties by right clicking on the task.
-In the tab "General" an admin account should be selected, which will be used to execute the task. If this is not the case, change it by clicking the "Change user or group" button.
+In the tab "General" an admin account should be selected, which will be used to execute the task. If this is not the case change it by clicking the "Change user or group" button.
 Now select "Run independently of user login" and set the "Run with highest privileges" checkbox.
 Under the "Trigger" tab, if the "On login" trigger is set, the desired user should be selected. If this is not the case, select the trigger and click on "Edit", then another window will open, now click "Change user" or simply select "Every user", so that the task will be executed, no matter who logs in.
 
