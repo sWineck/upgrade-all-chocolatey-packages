@@ -1,0 +1,87 @@
+Mittwoch, 31. Mai 2023 21:14:11
+
+Chocolatey upgraded 0/123 packages. 
+
+--------------------
+
+Mittwoch, 31. Mai 2023 21:22:01
+
+Chocolatey upgraded 0/123 packages. 
+
+--------------------
+
+Mittwoch, 31. Mai 2023 21:30:37
+
+Chocolatey upgraded 0/123 packages. 
+
+--------------------
+
+Mittwoch, 31. Mai 2023 21:35:48
+
+Chocolatey upgraded 0/123 packages. 
+
+--------------------
+
+Mittwoch, 31. Mai 2023 21:52:27
+
+Chocolatey upgraded 0/123 packages. 1 packages failed.
+
+--------------------
+
+Mittwoch, 31. Mai 2023 21:59:04
+
+Chocolatey upgraded 0/123 packages. 
+
+--------------------
+
+Mittwoch, 31. Mai 2023 22:08:58
+
+Chocolatey upgraded 0/123 packages. 1 packages failed.
+
+--------------------
+
+Donnerstag, 1. Juni 2023 02:17:27
+
+Chocolatey upgraded 2/123 packages. 
+
+--------------------
+
+Donnerstag, 1. Juni 2023 02:54:16
+
+Chocolatey upgraded 0/123 packages. 
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+--------------------
+
+Donnerstag, 1. Juni 2023 02:59:09
+
+Chocolatey upgraded 0/123 packages. 
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+--------------------
+
+Donnerstag, 1. Juni 2023 03:20:54
+
+Chocolatey upgraded 3/123 packages. 
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+Upgraded:
+ - audacity v3.3.2
+ - gpu-z v2.53.0
+ - signal v6.19.0
+
+--------------------
+
+Donnerstag, 1. Juni 2023 03:48:23
+
+Chocolatey upgraded 0/123 packages. 
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+--------------------
+
+Donnerstag, 1. Juni 2023 03:57:08
+
+Chocolatey upgraded 0/123 packages. 
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+--------------------
