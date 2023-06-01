@@ -1,0 +1,15 @@
+Freitag, 02. Juni 2023 00:50:34
+
+Chocolatey upgraded 6/123 packages. 1 packages failed.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+Upgraded:
+ - bleachbit v4.4.2
+ - bleachbit.install v4.4.2
+ - cpu-z v2.06
+ - Firefox v113.0.2
+ - gpu-z v2.53.0
+ - signal v6.20.0
+
+Failures
+ - git.install - Unable to resolve dependency: Unable to resolve dependencies. 'git.install 2.41.0' is not compatible with 'git 1.7.10 constraint: git.install (= 1.7.10)'.
