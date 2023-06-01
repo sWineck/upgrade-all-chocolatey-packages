@@ -10,7 +10,7 @@ if (-not $isAdmin) {
 Write-Host "Upgrade für alle Chocolatey-Pakete wird gestartet..."
 
 # Benutzername und Zeitstempel für den Logdateipfad
-$userName = "USERNAME1"
+$userName = "USERNAME"
 $dateTime = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 $logFilePath = "C:\Users\$userName\Documents\logs\choco-upgrade_test-logfile-$dateTime.txt"
 

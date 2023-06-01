@@ -1,7 +1,7 @@
 # upgrade all chocolatey packages
 Uses Powershell 7 with admin privileges to execute the command "choco upgrade all -y". The updated packages are written to a logfile with date and time.
  
-Adjust the paths for the logfile in the script if necessary and replace "USERNAME" with your real Windows user name.
+Replace "USERNAME" with the your user name for saving the log file in the correct path.
  
 The script can be automated with the Task Scheduler, so that the packages are always kept up to date. E.g. you could run the script every time a user logs in.
 Start the Task Scheduler as administrator and create a "Simple Task". Enter name and description. Select the desired trigger. Select "Start program" for the action. Now enter the path to your Powershell or find the .exe with the explorer via "Browse". With me it is this path: "C:\Program Files\PowerShell\7\pwsh.exe".
@@ -15,9 +15,9 @@ Now select "Run independently of user login" and set the "Run with highest privi
 Under the "Trigger" tab, if the "On login" trigger is set, the desired user should be selected. If this is not the case, select the trigger and click on "Edit", then another window will open, there go to "Change user" or simply select "Every user", so that the task will be executed on every user login, no matter who logs in.
 
 # aktualisiere alle Chocolatey Pakete
-Verwendet die Powershell 7 mit Admin-Rechten um den Befehl "choco upgrade all -y" auszuführen. Die aktualisierten Pakete werden mit Datum und Uhrzeit in ein Logfile geschrieben.
+Verwendet die Powershell 7 mit Admin-Rechten um den Befehl "choco upgrade all -y" auszuführen. Die aktualisierten Pakete werden mit Datum und Uhrzeit in einer Log-Datei geschrieben.
  
-Passe die Pfade für das Logfile im Skript wenn nötig an und ersetze "USERNAME" mit deinem richtigen Benutzernamen unter Windows.
+Ersetze "USERNAME" mit deinem Benutzernamen für das Speichern der Log-Datei im korrekten Pfad.
  
 Das Skript kann mit dem Task Scheduler automatisiert werden, sodass die Pakete immer aktuell gehalten werden. Z.B. könnte man das Skript bei jeder Anmeldung eines Benutzers ausführen.
 Starte dafür den Task Scheduler als Administrator und erstelle eine "Einfache Aufgabe". Gebe Namen und Beschreibung an. Wähle den gewünschten Trigger. Bei Aktion "Programm starten" wählen. Gebe nun den Pfad zu deiner Powershell ein oder finde die .exe mit dem Explorer über "Durchsuchen". Bei mir ist es dieser Pfad: "C:\Program Files\PowerShell\7\pwsh.exe".
