@@ -12,7 +12,7 @@ Now click on "Next" and then on "Finish".
 Now find your newly created task and display the properties by right clicking on the task.
 In the tab "General" an admin account should be selected, which will be used to execute the task. If this is not the case, change it by clicking the "Change user or group" button.
 Now select "Run independently of user login" and set the "Run with highest privileges" checkbox.
-Under the "Trigger" tab, if the "On login" trigger is set, the desired user should be selected. If this is not the case, select the trigger and click on "Edit", then another window will open, there go to "Change user" or simply select "Every user", so that the task will be executed on every user login, no matter who logs in.
+Under the "Trigger" tab, if the "On login" trigger is set, the desired user should be selected. If this is not the case, select the trigger and click on "Edit", then another window will open, now click "Change user" or simply select "Every user", so that the task will be executed, no matter who logs in.
 
 # aktualisiere alle Chocolatey Pakete
 Verwendet die Powershell 7 mit Admin-Rechten um den Befehl "choco upgrade all -y" auszuführen. Die aktualisierten Pakete werden mit Datum und Uhrzeit in einer Log-Datei geschrieben.
