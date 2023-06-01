@@ -1,7 +1,7 @@
 # upgrade all chocolatey packages
 Uses Powershell 7 with admin privileges to execute the command "choco upgrade all -y". The updated packages are written to a logfile with date and time.
  
-Adjust the paths for the logfile in the script if necessary and replace "USERNAME" with your real user name under Windows.
+Adjust the paths for the logfile in the script if necessary and replace "USERNAME" with your real Windows user name.
  
 The script can be automated with the Task Scheduler, so that the packages are always kept up to date. E.g. you could run the script every time a user logs in.
 Start the Task Scheduler as administrator and create a "Simple Task". Enter name and description. Select the desired trigger. Select "Start program" for the action. Now enter the path to your Powershell or find the .exe with the explorer via "Browse". With me it is this path: "C:\Program Files\PowerShell\7\pwsh.exe".
