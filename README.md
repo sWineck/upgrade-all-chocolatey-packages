@@ -5,7 +5,9 @@ Replace "USERNAME" with the your user name for saving the log file in the correc
  
 The script can be automated with the Task Scheduler, so that the packages are always kept up to date. E.g. you could run the script every time a user logs in.
 Start the Task Scheduler as administrator and create a "Simple Task". Enter name and description. Select the desired trigger. Select "Start program" for the action. Now enter the path to your Powershell or find the .exe with the explorer via "Browse". With me it is this path: "C:\Program Files\PowerShell\7\pwsh.exe".
-Add the following arguments: -NoExit -ExecutionPolicy Bypass -File "C:\Users\USERNAME\files\choco_upgrade.ps1".
+Add the following arguments:
+-NoExit -ExecutionPolicy Bypass -File "C:\Users\USERNAME\files\choco_upgrade.ps1".
+
 Again, make sure the path to the script is correct.
 Now click on "Next" and then on "Finish".
 
