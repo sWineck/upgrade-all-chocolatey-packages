@@ -1,5 +1,5 @@
 # upgrade all chocolatey packages
-Uses Powershell 7 with admin privileges to execute the command "choco upgrade all -y". The updated packages are written to a logfile with date and time.
+Uses Powershell 7 with admin privileges to run the command "choco upgrade all -y". A log file with timestamp displays the upgraded packages and the following lines.
  
 Replace "USERNAME" with the your user name for saving the log file in the correct path.
  
@@ -18,7 +18,7 @@ Now select "Run independently of user login" and set the "Run with highest privi
 Under the "Trigger" tab, if the "On login" trigger is set, the desired user should be selected. If this is not the case, select the trigger and click on "Edit", then another window will open, now click "Change user" or simply select "Every user", so that the task will be executed, no matter who logs in.
 
 # aktualisiere alle Chocolatey Pakete
-Verwendet die Powershell 7 mit Admin-Rechten um den Befehl "choco upgrade all -y" auszuführen. Die aktualisierten Pakete werden mit Datum und Uhrzeit in eine Log-Datei geschrieben.
+Verwendet die Powershell 7 mit Admin-Rechten um den Befehl "choco upgrade all -y" auszuführen. Eine Log-Datei mit Zeitstempel zeigt die aktualisierten Pakete und die folgenden Zeilen an.
  
 Ersetze "USERNAME" mit deinem Benutzernamen für das Speichern der Log-Datei im korrekten Pfad.
  
