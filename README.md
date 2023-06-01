@@ -8,6 +8,7 @@ Starte dafür den Task Scheduler als Administrator und erstelle eine "Einfache A
 Füge folgende Argumente hinzu: -NoExit -ExecutionPolicy Bypass -File "C:\Users\USERNAME\files\choco_upgrade.ps1"
 Achte auch hier auf den korrekten Pfad zum Skript.
 Jetzt auf "Weiter" klicken und anschließend auf "Fertig stellen".
+
 Finde nun deine neu erstellte Aufgabe und lasse dir die Eigenschaften über eine Rechtsklick auf die Aufgabe anzeigen.
 Im Reiter "Allgemein" sollte ein Admin-Konto ausgewählt sein, welches verwendet wird um die Aufgabe auszuführen. Wenn das nicht der Fall ist, ändere dies über den Button "Benutzer oder Gruppe ändern".
 Wähle nun "Unabhängig von der Benutzeranmeldung ausführen" und setze die Checkbox "Mit höchsten Privilegien ausführen".
