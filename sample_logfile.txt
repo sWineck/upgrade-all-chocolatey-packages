@@ -1,33 +1,3 @@
-Mittwoch, 31. Mai 2023 21:14:11
-
-Chocolatey upgraded 0/123 packages. 
-
---------------------
-
-Mittwoch, 31. Mai 2023 21:22:01
-
-Chocolatey upgraded 0/123 packages. 
-
---------------------
-
-Mittwoch, 31. Mai 2023 21:30:37
-
-Chocolatey upgraded 0/123 packages. 
-
---------------------
-
-Mittwoch, 31. Mai 2023 21:35:48
-
-Chocolatey upgraded 0/123 packages. 
-
---------------------
-
-Mittwoch, 31. Mai 2023 21:52:27
-
-Chocolatey upgraded 0/123 packages. 1 packages failed.
-
---------------------
-
 Mittwoch, 31. Mai 2023 21:59:04
 
 Chocolatey upgraded 0/123 packages. 
