@@ -1,36 +1,48 @@
 # Überprüft, ob das Skript als Administrator ausgeführt wird
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
-# Wenn das Skript nicht als Administrator ausgeführt wird, startet es sich selbst neu mit Administratorrechten
+
 if (-not $isAdmin) {
+    # Führt das Skript als Administrator aus, falls es nicht bereits als Administrator ausgeführt wird
     Start-Process -FilePath "pwsh.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$($MyInvocation.MyCommand.Path)`"" -Verb RunAs
     exit
 }
 
-# Gibt eine Meldung aus, dass das Upgrade für alle Chocolatey-Pakete gestartet wird
-echo "Starting upgrade for all chocolatey packages..."
+Write-Host "Upgrade für alle Chocolatey-Pakete wird gestartet..."
 
-# Führt `choco upgrade all -y` aus und speichert die Ausgabe sowohl in der Konsole als auch im temporären Logfile
-choco upgrade all -y | Tee-Object -FilePath 'C:\Users\USERNAME\Documents\logs\choco-upgrade_temp_logfile.txt'
+# Benutzername und Zeitstempel für den Logdateipfad
+$userName = "gssd"
+$dateTime = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
+$logFilePath = "C:\Users\$userName\Documents\logs\choco-upgrade_test-logfile-$dateTime.txt"
 
-# Fügt das aktuelle Datum und die Uhrzeit zum endgültigen Logfile hinzu
-Get-Date | Out-File -Append -FilePath 'C:\Users\USERNAME\Documents\logs\choco-upgrade_logfile.txt'
+# Führt das Chocolatey-Upgrade aus und speichert die Ausgabe in $chocoOutput
+$chocoOutput = choco upgrade cpu-z -y | ForEach-Object { Write-Host $_; $_ }
 
-# Durchläuft die Ausgabe des temporären Logfiles und fügt Zeilen, die "Chocolatey upgraded" enthalten, und alle nachfolgenden Zeilen zum endgültigen Logfile hinzu
-$foundUpgradeLine = $false
-Get-Content -Path 'C:\Users\USERNAME\Documents\logs\choco-upgrade_temp_logfile.txt' | ForEach-Object {
+# Initialisiert die Variable $foundUpgrade
+$foundUpgrade = $false
+
+# Filtert die Zeilen ab und einschließlich "Chocolatey upgraded"
+$chocoUpgraded = ($chocoOutput -split "`n" | ForEach-Object {
     if ($_ -match "Chocolatey upgraded") {
-        $foundUpgradeLine = $true
+        $foundUpgrade = $true
     }
-    if ($foundUpgradeLine) {
-        Out-File -Append -FilePath 'C:\Users\USERNAME\Documents\logs\choco-upgrade_logfile.txt' -InputObject $_
+    if ($foundUpgrade) {
+        $_
     }
+}) -join "`n"
+
+# Fügt die gefilterte Ausgabe zur Logdatei hinzu, wenn sie vorhanden ist
+if ($chocoUpgraded) {
+    $timestamp = Get-Date -Format "dddd, dd. MMMM yyyy HH:mm:ss"
+    $logContent = "$timestamp`n`n$chocoUpgraded"
+
+    # Erstellt die Logdatei, falls sie noch nicht existiert
+    if (-not (Test-Path $logFilePath)) {
+        New-Item -ItemType File -Path $logFilePath -Force | Out-Null
+    }
+
+    # Fügt die gefilterte Ausgabe zur Logdatei hinzu
+    Add-Content -Path $logFilePath -Value $logContent
 }
 
-# Löscht die temporäre Logfile
-Remove-Item -Path 'C:\Users\USERNAME\Documents\logs\choco-upgrade_temp_logfile.txt'
-
-# Fügt eine Trennlinie zum endgültigen Logfile hinzu
-Out-File -Append -FilePath 'C:\Users\USERNAME\Documents\logs\choco-upgrade_logfile.txt' -InputObject "`n--------------------"
-
-# Beendet das Skript mit dem Exitcode 0 (Erfolg)
+# Beendet das Skript
 $Host.SetShouldExit(0)
