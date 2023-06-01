@@ -12,7 +12,7 @@ Write-Host "Upgrade für alle Chocolatey-Pakete wird gestartet..."
 # Benutzername und Zeitstempel für den Logdateipfad
 $userName = "USERNAME"
 $dateTime = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
-$logFilePath = "C:\Users\$userName\Documents\logs\choco-upgrade_test-logfile-$dateTime.txt"
+$logFilePath = "C:\Users\$userName\Documents\logs\$dateTime-choco_upgrade_all-log.txt"
 
 # Führt das Chocolatey-Upgrade aus und speichert die Ausgabe in $chocoOutput
 $chocoOutput = choco upgrade cpu-z -y | ForEach-Object { Write-Host $_; $_ }
