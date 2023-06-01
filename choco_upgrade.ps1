@@ -15,7 +15,7 @@ $dateTime = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 $logFilePath = "C:\Users\$userName\Documents\logs\$dateTime-choco_upgrade_all-log.txt"
 
 # Führt das Chocolatey-Upgrade aus und speichert die Ausgabe in $chocoOutput
-$chocoOutput = choco upgrade cpu-z -y | ForEach-Object { Write-Host $_; $_ }
+$chocoOutput = choco upgrade all -y | ForEach-Object { Write-Host $_; $_ }
 
 # Initialisiert die Variable $foundUpgrade
 $foundUpgrade = $false
