@@ -1,6 +1,7 @@
 # upgrade all chocolatey packages
-A Powershell script that executes the command "choco upgrade all -y". A log file with timestamp shows the upgraded packages and the subsequent lines.
- 
+A PowerShell script that executes the command "choco upgrade all -y". A log file with timestamp shows the upgraded packages and the subsequent lines.
+
+Dependencies: Chocolatey Package Manager has to be installed.
 Replace "USERNAME" with the your user name for saving the log file in the correct path.
  
 The script can be automated with the Task Scheduler, so that the packages are always kept up to date. E.g. you could run the script every time a user logs in.
@@ -16,8 +17,9 @@ Now select "Run independently of user login" and set the "Run with highest privi
 Under the "Trigger" tab, if the "On login" trigger is set, the desired user should be selected. If this is not the case, select the trigger and click on "Edit", then another window will open, now click "Change user" or simply select "Every user", so that the task will be executed, no matter who logs in.
 
 # aktualisiere alle Chocolatey Pakete
-Ein Powershell Skript, welches den Befehl "choco upgrade all -y" auszuführt. Eine Log-Datei mit Zeitstempel zeigt die aktualisierten Pakete und die darauffolgenden Zeilen an.
- 
+Ein PowerShell Skript, welches den Befehl "choco upgrade all -y" auszuführt. Eine Log-Datei mit Zeitstempel zeigt die aktualisierten Pakete und die darauffolgenden Zeilen an.
+
+Abhängigkeiten: Chocolatey Package Manager muss installiert sein.
 Ersetze "USERNAME" mit deinem Benutzernamen für das Speichern der Log-Datei im korrekten Pfad.
  
 Das Skript kann mit dem Task Scheduler automatisiert werden, sodass die Pakete immer aktuell gehalten werden. Z.B. könnte man das Skript bei jeder Anmeldung eines Benutzers ausführen.
